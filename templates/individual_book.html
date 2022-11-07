@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+    <body>
+        <header><h1>Jam's Cursed Emporium</h1></header>
+        <ul>
+            <li class="navLink"><a href="/library">Return to all titles</a></li>
+          </ul>
+          <hr>
+        <article>
+        <h2>Your selected book:</h2>
+
+        <div>
+         <p> 
+            {% if book.checked_out %}
+            <h2 class="checked-out"><i> Checked out </i></h2>
+            {% else %}
+            <h2 class="available"><i>Available</i></h2>
+                {% endif %}
+            <h2>Title: {{ book.title }}</h2>
+            <h3>Author: {{ book.author }}, Genre: {{ book.genre }}</h3>
+            <h4>ISBN: {{ book.isbn }}</h4>
+            <h5>Index Location: {{ book.location }}</h5>
+            
+
+            
+
+            </p>
+
+            <h4>Description:</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi recusandae inventore fugit magnam sapiente blanditiis fugiat laboriosam voluptate ipsa facere suscipit tenetur, consequatur quaerat, rem perferendis sequi obcaecati quidem. Aperiam temporibus ab similique magnam ratione ipsum nesciunt consectetur dolore amet.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum deserunt excepturi facere vero iusto optio ad maiores animi? Aspernatur alias adipisci eveniet corporis reiciendis, iusto repudiandae maxime ullam tempora consectetur! Pariatur voluptatem odit in alias sapiente unde id nam ipsa eaque ullam adipisci modi quae quas quod, minus, totam exercitationem corrupti est atque aspernatur tenetur blanditiis commodi! Ex, placeat soluta.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptatum ut vel incidunt nobis distinctio impedit nemo accusamus, suscipit nisi deserunt doloribus veritatis maiores molestias.</p>
+
+
+        </div>
+  
+        </article>
+    </body>
+    <footer>
+        <p> address </p>
+        <p> customer information</p>
+        <p> about </p> 
+
+    </footer>
+</html>

@@ -1,0 +1,43 @@
+body {
+    font-family: Helvetic, Arial, sans-serif;
+    background-image: linear-gradient(to left, red, yellow);
+}
+
+body header{
+    display: flex;
+    justify-content: center;
+    color: yellow;
+    font-size: 3rem;
+    background-image: linear-gradient(to right, green, purple);
+    padding: 3rem;
+}
+
+.title-link{
+    text-decoration: none;
+    color: black;
+}
+
+.title-link:hover{
+    background-color: black;
+    color: red;
+}
+
+.delete-book input{
+    color: white;
+    background-color: red;
+
+}
+
+.new-book input{
+    color: white;
+    background-color: green;
+}
+
+.checked-out{
+    color: red;
+}
+
+.available{
+    color: green;
+}
+

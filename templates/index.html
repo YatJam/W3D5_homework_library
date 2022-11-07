@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>All titles in library:</h1>
+    <form class="new-book" action="/library" method="post">
+        <label for="isbn">ISBN:</label>
+        <input type="text" name="isbn" id="isbn">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title">
+        <label for="author">Author:</label>
+        <input type="text" name="author" id="author">
+        <label for="genre">Genre:</label>
+        <input type="text" name="genre" id="genre">
+        <label for="location">Stored Location:</label>
+        <input type="text" name="location" id="location">
+        <input type="submit" value="Add Book To Library">
+      </form>
+    
+    
+
+    <div class="event-container">
+    {% for book in library %}
+    <div class="book">
+      <h2>Title: <a class="title-link" href="/books/{{loop.index-1}}">{{ book.title }}</a></h2>
+      <h3>Author: {{ book.author }}, Genre: {{ book.genre }}</h3>
+      <h4>ISBN: {{ book.isbn }}</h4>
+      <h5>Index Location: {{ book.location }}</h5>
+    
+      
+      <form class="delete-book" action="/library/delete/{{ book.title }}" method="POST">
+        <input type="submit" value="Remove From Library">
+      </form>
+      <hr>
+    </div>
+    {% endfor %}
+    </div>
+{% endblock %}

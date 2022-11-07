@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+      <title>{{ title }} - Jam's Cursed Emporium</title>
+    </head>
+    <body>
+        <header>Jam's Cursed Emporium</header>
+        <ul>
+          <li clas="navLink"><a href="/library">Oblivion</a></li>
+        </ul>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
